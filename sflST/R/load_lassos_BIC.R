@@ -35,9 +35,9 @@ load_lassos_BIC <- function(lasso_folder,name){
         BICs_mob_gamma_1 <- append(BICs_mob_gamma_1,BICs_mob_set)
         lls_mob_gamma_1 <-  append(lls_mob_gamma_1,lls_mob_set)
     }
-    saveRDS(Matrix(counts_mob_gamma_1,sparse=TRUE),file=paste('counts',name,'.RDS',sep = ''))
-    saveRDS(fits_mob_gamma_1,file=paste('fits',name,'.RDS',sep = ''))
-    saveRDS(BICs_mob_gamma_1,file=paste('BICs',name,'.RDS',sep = ''))
-    saveRDS(lls_mob_gamma_1,file=paste('lls',name,'.RDS',sep = ''))
+    saveRDS(Matrix(counts_mob_gamma_1,sparse=TRUE),file=paste('./',name,'/','counts_lasso_BIC.RDS',sep = ''))
+    saveRDS(fits_mob_gamma_1,file=paste('./',name,'/','fits_lasso_BIC.RDS',sep = ''))
+    saveRDS(BICs_mob_gamma_1,file=paste('./',name,'/','BICs_lasso_BIC.RDS',sep = ''))
+    saveRDS(lls_mob_gamma_1,file=paste('./',name,'/','lls_lasso_BIC.RDS',sep = ''))
 
 }
