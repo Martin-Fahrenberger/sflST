@@ -9,7 +9,6 @@
 #' @param gamma ratio of penalization between sparsity and continuity (default 1, high = sparse)
 fused_lasso_complete_fixed_gamma <- function(gene_list,counts_matrix,ids_table,name,output_folder,include_diag=FALSE,gamma=1){
     require(genlasso)
-    source('./Chunks/fusedlasso2d_diag.R')
     lasso_set <- c()
     for (i in gene_list) {
         tmp_matrix <- matrix(data = 0,nrow = max(ids_table[rownames(counts_matrix),1]),ncol = max(ids_table[rownames(counts_matrix),2]))
